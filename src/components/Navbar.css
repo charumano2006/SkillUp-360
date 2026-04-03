@@ -1,0 +1,90 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+/* Logo and Text Alignment */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-img {
+  width: 35px;
+  height: auto;
+  margin-top: 10px; /* Positions logo straight with text */
+}
+
+.logo-text {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Buttons Area */
+.nav-actions {
+  display: flex;
+  gap: 5px;
+}
+
+.dropdown {
+  position: relative;
+}
+
+/* AUTH BUTTONS - This makes them identical */
+.auth-btn {
+  width: 25px;            /* Exact same width for both */
+  height: 40px;            /* Exact same height */
+  background-color: #2563eb; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase; /* Makes "LOGIN" look like "Register" style */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.auth-btn:hover {
+  background-color: #1d4ed8;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background: rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 6px;
+  min-width: 125px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdown-menu a {
+  color: white;
+  padding: 12px 15px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background: #3b82f6;
+}

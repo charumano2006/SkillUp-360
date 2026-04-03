@@ -1,0 +1,179 @@
+/* Home.css - Base reset must be active elsewhere */
+
+.admin-login-theme-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0056b3; /* Matching blue background from student login */
+  padding: 20px;
+}
+
+.admin-theme-container-split {
+  display: flex;
+  width: 800px;
+  height: 520px;
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* LEFT SIDE - NEW BLUE THEME */
+.admin-theme-left {
+  flex: 1;
+  /* Matching the student branding blue gradient */
+  background: linear-gradient(135deg, #0077ff, #0044cc); 
+  color: white;
+  padding: 40px; /* Revised padding after logo removal */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers text vertically in the smaller space */
+  overflow: hidden;
+}
+
+.brand-content {
+  position: relative;
+  z-index: 5;
+  text-align: center; /* Center-align the text to make it more professional */
+}
+
+/* Logo specific classes are removed */
+
+.admin-theme-left h1 { 
+  font-size: 38px; /* Slightly larger to fill the new space */
+  font-weight: 800; 
+  margin: 0; 
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.brand-subtitle { 
+  color: #00e5ff; /* SkillUp Cyan */
+  font-weight: bold; 
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+}
+
+.brand-text { 
+  font-size: 14px; 
+  line-height: 1.6; 
+  opacity: 0.9; 
+  max-width: 320px; /* Keeps text within a readable column */
+}
+
+/* SHAPES */
+.theme-shape { position: absolute; background: rgba(255, 255, 255, 0.1); border-radius: 50%; }
+.shape-1 { width: 220px; height: 220px; bottom: -60px; left: -60px; }
+.shape-2 { width: 110px; height: 110px; top: -20px; right: -20px; }
+
+/* RIGHT SIDE - PERFECT ALIGNMENT */
+.admin-theme-right {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-box-centered { width: 100%; }
+.form-box-centered h2 { font-size: 28px; margin-bottom: 5px; color: #222; text-align: center;}
+.form-subtitle { font-size: 12px; color: #666; margin-bottom: 25px; text-align: center;}
+
+.admin-auth-form {
+  display: flex;
+  flex-direction: column; /* Forces vertical stacking */
+}
+
+.admin-input-field {
+  margin-bottom: 18px;
+}
+
+/* Alignment fix for labels */
+.admin-input-field label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Spacing between icon and text */
+  font-size: 12px;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 6px;
+  text-align: left;
+}
+
+.admin-input-field input {
+  width: 100%; /* Fixes narrow input issue */
+  padding: 12px;
+  border: 1px solid #ccc;
+  background: #fdfdfd;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.admin-input-field input:focus { 
+  border-color: #0077ff; /* Brand Blue */
+  box-shadow: 0 0 8px rgba(0, 119, 255, 0.15); 
+}
+
+/* Correct Alignment for Remember Me */
+.admin-form-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  margin-bottom: 25px;
+}
+
+.admin-remember-me {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Spaces checkbox from text */
+  color: #444;
+}
+
+.admin-forgot-link { color: #d9534f; text-decoration: none; font-weight: 600; }
+
+.btn-admin-primary {
+  width: 100%;
+  padding: 13px;
+  /* Matching the darker blue button branding */
+  background: #002244; 
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+.btn-admin-primary:hover { 
+  background: #001122; 
+  transform: translateY(-1px);
+}
+
+.admin-or-divider {
+  text-align: center;
+  margin: 20px 0;
+  border-bottom: 1px solid #eee;
+  line-height: 0.1em;
+}
+
+.admin-or-divider span { background: #fff; padding: 0 10px; color: #999; font-size: 10px; font-weight: bold; }
+
+.admin-footer-text { text-align: center; font-size: 12px; color: #777; margin-bottom: 15px; }
+.admin-footer-text a { color: #0077ff; font-weight: bold; text-decoration: none; }
+
+.admin-back-link {
+  display: block;
+  text-align: center;
+  font-size: 11px;
+  color: #bbb;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.admin-back-link:hover { color: #00e5ff; }

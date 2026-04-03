@@ -1,0 +1,74 @@
+.splash-screen {
+  position: fixed; /* Locks it to the viewport */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border: none !important;
+  outline: none !important;
+  box-sizing: border-box;
+}
+
+.splash-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Bottom-to-center entrance */
+  animation: slideUpCenter 1.2s cubic-bezier(0.2, 1, 0.3, 1) forwards;
+}
+
+.logo-small {
+  width: 250px; 
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.brand-name {
+  color: #0f172a;
+  font-family: 'Inter', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.tagline {
+  color: #64748b;
+  font-size: 1rem;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.loader-track {
+  width: 200px;
+  height: 4px;
+  background: #f1f5f9;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loader-fill {
+  width: 0%;
+  height: 100%;
+  background: #2563eb;
+  animation: fillProgress 3.5s linear forwards;
+}
+
+@keyframes slideUpCenter {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fillProgress {
+  to { width: 100%; }
+}

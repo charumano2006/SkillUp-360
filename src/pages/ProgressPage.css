@@ -1,0 +1,39 @@
+.pg-root { background: #010a13; height: 100vh; color: #fff; font-family: 'Inter', sans-serif; display: flex; flex-direction: column; overflow: hidden; }
+
+.pg-nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(0, 212, 255, 0.2); }
+.pg-pulse { width: 10px; height: 10px; background: #00d4ff; border-radius: 50%; box-shadow: 0 0 10px #00d4ff; }
+.pg-nav h2 { color: #00d4ff; font-size: 0.9rem; letter-spacing: 2px; }
+
+.pg-esc { background: transparent; border: 1px solid #7000ff; color: #7000ff; padding: 6px 15px; cursor: pointer; transition: 0.3s; }
+.pg-esc:hover { background: #7000ff; color: #fff; }
+
+.pg-scroll { flex: 1; overflow-y: auto; padding: 40px; }
+
+.pg-header { text-align: center; margin-bottom: 50px; }
+.pg-header h1 { font-size: 2.2rem; color: #00d4ff; margin-bottom: 10px; }
+
+.pg-summary-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; max-width: 1300px; margin: 0 auto; }
+
+.pg-card { padding: 40px 30px; border-radius: 15px; position: relative; border: 1px solid rgba(255, 255, 255, 0.05); }
+.weak-border { border-left: 5px solid #ff4d4d; }
+.strong-border { border-left: 5px solid #00ff9f; }
+
+.pg-card-tag { position: absolute; top: -10px; right: 20px; font-size: 0.65rem; padding: 4px 10px; border-radius: 4px; font-weight: bold; }
+.red { background: #ff4d4d; color: #000; }
+.green { background: #00ff9f; color: #000; }
+
+.topic-item { margin-bottom: 30px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 20px; }
+.topic-main { display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1rem; margin-bottom: 10px; }
+.score-val { color: #00d4ff; }
+.topic-tips { font-size: 0.85rem; color: #8892b0; line-height: 1.4; margin-bottom: 15px; }
+
+.practice-btn { background: rgba(255, 77, 77, 0.1); border: 1px solid #ff4d4d; color: #ff4d4d; padding: 8px 15px; font-size: 0.7rem; cursor: pointer; transition: 0.3s; }
+.practice-btn:hover { background: #ff4d4d; color: #000; }
+.blue-btn { background: rgba(0, 212, 255, 0.1); border-color: #00d4ff; color: #00d4ff; }
+.blue-btn:hover { background: #00d4ff; color: #000; }
+
+.pg-insights { max-width: 1300px; margin: 40px auto; padding: 30px; border: 1px solid rgba(0, 212, 255, 0.1); border-radius: 15px; }
+.insights-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+.insight-box { background: rgba(0, 212, 255, 0.03); padding: 20px; border-radius: 10px; }
+.insight-box h4 { color: #00d4ff; margin-bottom: 10px; }
+.insight-box p { color: #8892b0; font-size: 0.85rem; }

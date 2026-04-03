@@ -1,0 +1,116 @@
+.cpp-root {
+  background: #010a13; /* Deep Cyber Blue */
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.cpp-topbar {
+  background: rgba(2, 12, 27, 0.95);
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #00eaff;
+  box-shadow: 0 0 15px rgba(0, 234, 255, 0.2);
+  z-index: 10;
+}
+
+.cpp-topbar h2 { color: #00eaff; font-size: 1.1rem; letter-spacing: 2px; }
+
+.cpp-nav button {
+  background: transparent;
+  border: 1px solid #00eaff;
+  color: #00eaff;
+  padding: 7px 18px;
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.3s;
+}
+
+.cpp-nav button:hover { background: #00eaff; color: #000; box-shadow: 0 0 10px #00eaff; }
+
+.cpp-main-layout { display: flex; flex: 1; overflow: hidden; }
+
+.cpp-sidebar {
+  width: 260px;
+  background: #020c1b;
+  padding: 30px 20px;
+  border-right: 1px solid rgba(0, 234, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-hint { font-size: 0.6rem; color: #8892b0; letter-spacing: 3px; margin-bottom: 10px; }
+
+.cpp-side-link {
+  color: #8892b0;
+  text-decoration: none;
+  font-size: 0.85rem;
+  padding: 12px;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.cpp-side-link:hover { color: #00eaff; background: rgba(0, 234, 255, 0.05); }
+
+.cpp-content-scroll {
+  flex: 1;
+  overflow-y: auto;
+  padding: 40px 80px;
+  scroll-behavior: smooth;
+}
+
+.cpp-section { margin-bottom: 100px; }
+
+.cpp-title {
+  color: #00eaff;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  border-left: 5px solid #7000ff;
+  padding-left: 20px;
+}
+
+.cpp-info-row { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px; }
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 25px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.cpp-card h4 { color: #00ff9f; margin-bottom: 12px; font-size: 0.85rem; letter-spacing: 1px; }
+.cpp-card p { font-size: 0.95rem; line-height: 1.7; color: #ccd6f6; }
+
+.cpp-code-row { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 30px; }
+
+.cpp-code-box { background: #01080b; padding: 25px; border-radius: 10px; border: 1px solid #1a232e; }
+.code-tag { font-size: 0.65rem; color: #555; margin-bottom: 12px; }
+pre { color: #00ff9f; font-family: 'Fira Code', monospace; font-size: 0.9rem; }
+
+.cpp-practice-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+
+.cpp-practice-item {
+  background: rgba(112, 0, 255, 0.07);
+  padding: 18px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(112, 0, 255, 0.15);
+  color: #ccd6f6;
+}
+
+.cpp-divider {
+  height: 1px;
+  background: linear-gradient(to right, #7000ff, #00eaff, transparent);
+  margin-top: 70px;
+  opacity: 0.2;
+}
+
+.cpp-content-scroll::-webkit-scrollbar { width: 6px; }
+.cpp-content-scroll::-webkit-scrollbar-thumb { background: #00eaff; border-radius: 10px; }

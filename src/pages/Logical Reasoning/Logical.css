@@ -1,0 +1,211 @@
+/* Container Layout */
+.logical-master-container {
+  display: flex;
+  height: 100vh;
+  background-color: #020617; /* Dark Tech Background */
+  color: #e2e8f0;
+  font-family: 'Share Tech Mono', monospace;
+  overflow: hidden;
+}
+
+/* Fixed Sidebar */
+.logical-sidebar {
+  width: 280px;
+  background: rgba(15, 23, 42, 0.95);
+  border-right: 1px solid rgba(0, 247, 255, 0.2);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00f7ff;
+  text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
+.sidebar-nav {
+  flex-grow: 1;
+  overflow-y: auto; /* Scrollable list of topics */
+  padding-right: 5px;
+}
+
+/* Sidebar Links */
+.nav-link {
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  border-left: 2px solid transparent;
+}
+
+.nav-link:hover {
+  background: rgba(0, 247, 255, 0.1);
+  color: #00f7ff;
+  border-left: 2px solid #00f7ff;
+}
+
+.nav-bullet {
+  width: 6px;
+  height: 6px;
+  background: #334155;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.nav-link:hover .nav-bullet {
+  background: #00f7ff;
+  box-shadow: 0 0 5px #00f7ff;
+}
+
+/* Bottom Buttons */
+.sidebar-bottom {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 247, 255, 0.2);
+}
+
+.nav-btn {
+  background: rgba(0, 247, 255, 0.05);
+  border: 1px solid rgba(0, 247, 255, 0.3);
+  color: #00f7ff;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: 0.3s;
+}
+
+.nav-btn:hover {
+  background: #00f7ff;
+  color: #020617;
+  box-shadow: 0 0 15px #00f7ff;
+}
+
+/* Main Content Area */
+.logical-content-stream {
+  flex-grow: 1;
+  overflow-y: auto; /* This allows scrolling through topics */
+  padding: 40px;
+  scroll-behavior: smooth;
+}
+
+.page-header {
+  margin-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 247, 255, 0.1);
+  padding-bottom: 20px;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  color: #f8fafc;
+  margin: 0;
+}
+
+.status-indicator {
+  font-size: 0.75rem;
+  color: #00f7ff;
+  margin-top: 10px;
+}
+
+/* HUD Section Frames */
+.content-section {
+  margin-bottom: 80px;
+}
+
+.hud-frame {
+  border: 1px solid rgba(0, 247, 255, 0.3);
+  background: rgba(15, 23, 42, 0.6);
+  padding: 30px;
+  position: relative;
+}
+
+.frame-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 1px solid rgba(0, 247, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.section-name {
+  color: #00f7ff;
+  margin: 0;
+}
+
+.label {
+  color: #64748b;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+.text {
+  line-height: 1.6;
+  color: #cbd5e1;
+}
+
+.dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin: 25px 0;
+}
+
+.grid-box {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.rules-list {
+  list-style: none;
+  padding: 0;
+}
+
+.rules-list li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+}
+
+.formula-item {
+  background: rgba(0, 247, 255, 0.1);
+  padding: 10px;
+  margin-bottom: 5px;
+  border-left: 3px solid #00f7ff;
+}
+
+.example-text {
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 4px;
+  color: #50e3c2;
+}
+
+/* Custom Scrollbar for Chrome/Safari */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020617;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00f7ff;
+}
