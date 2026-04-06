@@ -15,7 +15,7 @@ const ResultPage = () => {
     <div className="report-root">
       <header className="report-header">
         <h1 className="glitch-text">PERFORMANCE_REPORT</h1>
-        <button className="esc-btn" onClick={() => navigate("/dashboard")}>
+        <button className="esc-btn" onClick={() => navigate("/student-dashboard")}>
           ESC_DASHBOARD
         </button>
       </header>

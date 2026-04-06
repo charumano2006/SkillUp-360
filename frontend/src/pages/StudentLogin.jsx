@@ -1,29 +1,57 @@
-import React from "react";
-import { Link, useNavigate } from "react-router-dom"; // Added useNavigate
+import React, { useState } from "react"; // ✅ added
+import { Link, useNavigate } from "react-router-dom";
 import "./StudentLogin.css";
+import axios from "axios"; // ✅ added
 
 const StudentLogin = () => {
-  const navigate = useNavigate(); // Initialize the navigate hook
+  const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  // ✅ STATE
+  const [form, setForm] = useState({
+    email: "",
+    password: ""
+  });
+
+  // ✅ HANDLE INPUT
+  const handleChange = (e) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // --- AUTHENTICATION LOGIC GOES HERE ---
-    // For now, it will directly navigate to the student dashboard
-    console.log("Student Logged In");
-    navigate("/student-dashboard"); // Navigate to the correct route
+
+    try {
+      const res = await axios.post(
+        "http://localhost:5000/api/auth/login",
+        {
+          email: form.email,
+          password: form.password,
+          role: "student" // 🔥 IMPORTANT
+        }
+      );
+
+      alert("Login Success ✅");
+
+      // Save token
+      localStorage.setItem("token", res.data.token);
+
+      // Navigate
+      navigate("/student-dashboard");
+
+    } catch (err) {
+      console.log(err);
+      alert(err.response?.data?.message || "Login failed ❌");
+    }
   };
 
   return (
     <div className="login-wrapper">
       <div className="login-container-split">
         
-        {/* LEFT BRANDING SIDE */}
+        {/* LEFT SIDE */}
         <div className="login-left">
           <div className="brand-content">
-            <div className="logo-white-bg">
-              {/* Logo icon/image can go here */}
-            </div>
+            <div className="logo-white-bg"></div>
             <h1>WELCOME</h1>
             <p className="brand-subtitle">TO SKILLUP360</p>
             <p className="brand-text">
@@ -34,22 +62,34 @@ const StudentLogin = () => {
           <div className="shape shape-2"></div>
         </div>
 
-        {/* RIGHT FORM SIDE */}
+        {/* RIGHT SIDE */}
         <div className="login-right">
           <div className="form-box">
             <h2>Sign in</h2>
             <p className="form-subtitle">Enter your student credentials to continue</p>
 
-            {/* Added onSubmit handler to the form */}
             <form className="auth-form" onSubmit={handleSubmit}>
+              
               <div className="input-field">
                 <label>👤 Email Address</label>
-                <input type="email" placeholder="User name" required />
+                <input
+                  type="email"
+                  name="email"            // ✅ added
+                  placeholder="User name"
+                  required
+                  onChange={handleChange} // ✅ added
+                />
               </div>
 
               <div className="input-field">
                 <label>🔒 Password</label>
-                <input type="password" placeholder="••••••••" required />
+                <input
+                  type="password"
+                  name="password"         // ✅ added
+                  placeholder="••••••••"
+                  required
+                  onChange={handleChange} // ✅ added
+                />
               </div>
 
               <div className="form-options">
